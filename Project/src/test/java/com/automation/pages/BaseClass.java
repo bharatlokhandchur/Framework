@@ -49,14 +49,16 @@ public class BaseClass {
 
 		Reporter.log("Setting done - Test can be Started ", true);
 	}
-
+   
 	@BeforeClass
-	public void setup() {
+	public void setup(String browser,String url) {
 
 		Reporter.log("Trying to Start Browser and Application Ready ", true);
 
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStringURL());
 
+	
+		
 		Reporter.log(" Browser and Application is Up And Running ", true);
 
 	}
