@@ -14,9 +14,9 @@ public class LoginPage {
 		this.driver=driver;	
 	}
 	
-	@FindBy(name="username") WebElement uname;
+	@FindBy(xpath="//*[@name='username']") WebElement uname;
 	
-	@FindBy(name="password") WebElement pass;
+	@FindBy(xpath="//*[@name='password']") WebElement pass; 
 
 	@FindBy(xpath="//input[@value='login']") WebElement loginButton;
 	

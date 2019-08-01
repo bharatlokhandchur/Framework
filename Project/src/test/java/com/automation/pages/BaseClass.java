@@ -57,7 +57,7 @@ public class BaseClass {
 
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getStringURL());
 
-		Reporter.log("Browser and Application is Up And Running ", true);
+		Reporter.log(" Browser and Application is Up And Running ", true);
 
 	}
 
@@ -75,17 +75,15 @@ public class BaseClass {
 		Reporter.log("Test is about to End ", true);
 
 		if (result.getStatus() == ITestResult.FAILURE) {
-			logger.fail("Test Failed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenShot(driver)).build());
+			logger.fail("Test Failed",MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenShot(driver)).build());
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			logger.pass("Test Passed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenShot(driver)).build());
+			logger.pass("Test Passed",MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenShot(driver)).build());
 
 		}
 
 		report.flush();
 
-		Reporter.log("Test Completed >>>> REports Generated ", true);
+		Reporter.log("Test Completed >>>> Reports Generated ", true);
 
 	}
 
